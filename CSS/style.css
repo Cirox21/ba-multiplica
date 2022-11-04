@@ -1,13 +1,12 @@
 
-
 #titulo {
     color: #B20202;
     font-family: 'Permanent Marker', cursive;
 }
 
 #logo {
-    height: 45px;
-    width: 45px;
+    height: 60px;
+    width: 60px;
 }
 
 h2 {
@@ -27,7 +26,7 @@ nav ul li a {
 
 #boton {
     color: #fff;
-	background-color:#264789;
+	background-color:#353232;
     margin-right: 10px;
 }
 .redes-container{
@@ -40,6 +39,7 @@ nav ul li a {
     --facebook: #3b5999;
     --instagram: #e4405f;
     --linkedin: #0077B5;
+    --whatsapp: #25D366;
 }
 
 .redes-container{
@@ -88,23 +88,15 @@ nav ul li a {
 .redes-container ul li .linkedin:hover{
     background: var(--linkedin);
 }
+
+.redes-container ul li .whatsapp:hover{
+    background: var(--whatsapp);
+}
+
 img {
     height: 400px;
 }
-/*
-.video{
-    margin-left: 40px;
-}
 
-a {
-    text-decoration: none;
+.error{
+    color: #B20202;
 }
-main {
-    margin-left: 10px;
-}
-
-p {
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-*/

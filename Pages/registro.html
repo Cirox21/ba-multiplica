@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./Image/logo.jpeg" type="image/png">
+    <link rel="icon" href="../Image/logo.png" type="image/png">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-ligth">
             <a class="navbar-brand" href="../index.html">
                 <h1 class="mb-3" id="titulo">
-                    <img src="../Image/logo.jpeg" alt="" id="logo">
+                    <img src="../Image/logo.png" alt="" id="logo">
                     La Renga
                 </h1>    
             </a>
@@ -78,55 +78,85 @@
     </div>
 </header>
 <body>
-    <main class="container">
-        <form action="#">
-        <fieldset>
-            <legend><h2>Registrate</h2></legend>
-            <p>
-              <label for="name">Nombre:</label>
-              <br />
-              <input type="text" name="name" placeholder="Ej: luis" required />
-            </p>
-            <p>
-                <label for="phone">Telefono</label>
-                <br>
-                <input type="tel" name="phone" placeholder="Ej: 15 1111 1111">
-            </p>
-            <p>
-              <label for="email">Email*: </label>
-              <br />
-              <input type="text" name="email" placeholder="Ej: luis@gmail.com" required />
-            </p>
-            <p>
-                <label for="password">Contraseña:</label>
-                <br>
-                <input type="password" name="password" id="password" placeholder="******" required>
-            </p>
-            <p>
-              <label for="age">Edad: </label>
-              <br />
-              <input type="text" name="age" placeholder="Ej: 21" />
-            </p>
-      
-            <p>
-              <label for="genero">Genero: </label>
-              <br />
-              <select name="genero">
-                <option value="1">Masculino</option>
-                <option value="1">Femenino</option>
-                <option value="1">No Binario</option>
-                <option value="1">Prefiero no decir</option>
-              </select>
-            </p>
-            <p>
-              <input type="checkbox" id="accept" required/>
-              <label for="accept">Acepto terminos y condiciones*: </label>
-            </p>
-            <p>
-              <input type="submit" value="Registrar" />
-            </p>
-        </fieldset>
-        </form>
+    <main>
+        <div class="py-5">
+            <div class="col-md-6 m-auto">
+              <h2 class="mb-3">Registro</h2>
+              <hr>
+              <form action="">
+                <div>
+                  <label for="email">Correo electrónico*</label>
+                  <input 
+                  class="form-control" 
+                  type="text" 
+                  name="email"
+                  id="email"
+                  placeholder="Correo electrónico"
+                  >
+                  <p id="errorEmail" class="error"></p>
+                </div>
+                <div>
+                  <label for="password">Contraseña</label>
+                  <input
+                  class="form-control" 
+                  type="password" 
+                  name="password"
+                  id="password"
+                  placeholder="Contraseña"
+                  >
+                  <p class="error" id="errorPassword"></p>
+                </div>
+                <div>
+                  <label for="password2">Confirmacion de Contraseña</label>
+                  <input
+                  class="form-control" 
+                  type="password" 
+                  name="password2"
+                  id="password2"
+                  placeholder="Repetir Contraseña"
+                  >
+                  <p class="error" id="errorPassword2"></p>
+                </div>
+                <div>
+                  <label>Discografia favorita *</label>
+                      <select name="musica" id="musica" class="form-control">
+                        <option value="">Seleccione</option>
+                        <option value="1">Esquivando charcos</option>
+                        <option value="2">A donde me lleva la vida...</option>
+                        <option value="3">Despedazado por mil partes</option>
+                        <option value="4">La Renga</option>
+                        <option value="5">La esquina del infinito</option>
+                        <option value="6">Detonador de sueños</option>
+                        <option value="7">Otro</option>
+                      </select>
+                      <p class="error" id="errorMusica"></p>
+                </div>
+                <div>
+                  <h5>Edad *</h5>
+                  <p class="error" id="errorEdad"></p>
+                  <label for="edad"></label><br>
+                      <input type="radio" name="edad" id="edad"> Menor a 20<br>
+                      <input type="radio" name="edad" id="edad"> 20 a 40<br>
+                      <input type="radio" name="edad" id="edad"> Mayor a 50<br>
+                </div>
+                <div>
+                  <input 
+                  type="checkbox" 
+                  name=""
+                  id="terminos" 
+                  value="acepta"
+                  >
+                  <label for="terminos"> Acepto los términos y condiciones *</label>
+                  <p class="error" id="errorTerminos"></p>
+                </div>
+                <button class="btn btn-primary" id="boton-1" type="submit" onclick="return validar(this.form)">
+                  Enviar
+                </button>
+              </form>
+              <br>
+              <p class="campObl"> *Campos Obligatorios</p>
+            </div>
+          </div>
     </main>
     <footer class="container">
         <hr>
@@ -139,6 +169,7 @@
                 </ul>
             </div>
     </footer>
+    <script src="../JS/formulario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
