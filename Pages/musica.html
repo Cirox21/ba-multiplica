@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../Image/logo.png" type="image/png">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>La Renga</title>
+    </head>
+<header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <h1 class="mb-3" id="titulo">
+                            <img src="../Image/logo.png" alt="" id="logo">
+                            La Renga
+                        </h1>    
+                    </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a href="./galeria.html" class="nav-link">Galeria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./musica.html" class="nav-link">Musica</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="tienda.html" class="nav-link">Tienda</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <!-- Button trigger modal -->
+                                <button 
+                                    type="button" 
+                                    class="btn"
+                                    id="boton" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#exampleModal">
+                                    Contacto
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Contacto</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><a href="mailto:maxbee.carrasco@outlook.com">maxbee.carrasco@outlook.com</a></p>
+                                                <u class="contacto">+549 11 3504-2958</u>
+                                            </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn" id="boton" href="./registro.html" role="button">Registrate</a>
+                            </li>
+                        </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+</header>
+<body>
+    <main class="container">
+        <h2>
+            Canciones
+        </h2>
+        <section class="reproductor">
+          <div class="wrapper">
+            <div class="top-bar">
+              <i class="material-icons">expand_more</i>
+              <span>Now Playing</span>
+              <i class="material-icons">more_horiz</i>
+            </div>
+            <div class="img-area">
+              <img src="" alt="">
+            </div>
+            <div class="song-details">
+              <p class="name">nombre cancion</p>
+              <p class="artist">artista</p>
+            </div>
+            <div class="progress-area">
+              <div class="progress-bar">
+                <audio id="main-audio" src=""></audio>
+              </div>
+              <div class="song-timer">
+                <span class="current-time">0:00</span>
+                <span class="max-duration">0:00</span>
+              </div>
+            </div>
+            <div class="controls">
+              <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+              <i id="prev" class="material-icons">skip_previous</i>
+              <div class="play-pause">
+                <i class="material-icons play">play_arrow</i>
+              </div>
+              <i id="next" class="material-icons">skip_next</i>
+              <i id="more-music" class="material-icons">queue_music</i>
+            </div>
+            <div class="music-list">
+              <div class="header">
+                <div class="row">
+                  <i class= "list material-icons">queue_music</i>
+                  <span>Music list</span>
+                </div>
+                <i id="close" class="material-icons">close</i>
+              </div>
+              <ul>
+                <!-- here li list are coming from js -->
+              </ul>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer class="container-fluid">
+        <hr>
+        <div class="redes-container">
+            <ul>
+                <li><a href="https://www.facebook.com/MaxCarrascok/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/max.carrascook/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/maxbee-carrasco-703015193/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://wa.me/5491135042958?text=Hola%20solicito%20informacion" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../JS/music-list.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
