@@ -136,7 +136,6 @@ footer{
 .reproductor{
   align-items: center;
   justify-content: center;
-  min-width: 100vh;
   display:flex;
   font-family: 'Comfortaa', cursive;
 }
